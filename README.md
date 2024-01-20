@@ -35,5 +35,3 @@ This analysis aims to uncover the different customer segments, purchase trends, 
 21. Which of the customer types brings the most revenue?
 22. Which city has the largest tax/VAT percentage?
 23. Which customer type pays the most in VAT?
-# Code
-Vist [Walmart Data SQL query.sql](url) to find the code to this project
