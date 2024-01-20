@@ -184,8 +184,8 @@ FROM walmart_sales
 WHERE branch = "C"
 GROUP BY gender
 ORDER BY gender_cnt DESC;
--- Gender per branch is almost the same, I don't think this has 
--- an effect on the sales per branch and other factors.
+-- Gender per branch is almost the same, This has no 
+-- effect on the sales per branch and other factors.
 
 -- Which time of the day do customers give most ratings?
 SELECT
@@ -194,11 +194,11 @@ SELECT
 FROM walmart_sales
 GROUP BY day_name
 ORDER BY avg_rating DESC;
--- Looks like time of the day does not really affect the rating, with hugest rating day
+-- The time of the day does not affect the rating, with the highest rating day
 -- having less than 1 point higher than the lowest
 
 
--- Which time of the day do customers give most ratings per branch?
+-- Which time of the day do customers give the most ratings per branch?
 SELECT
 	day_name, AVG(rating) AS avg_rating
 FROM walmart_sales
@@ -206,18 +206,18 @@ WHERE branch IN ('A', 'B', 'C')
 GROUP BY day_name
 ORDER BY avg_rating DESC;
 -- Branch A and C are doing well in ratings, branch B needs to do a 
--- little more to get better ratings.
+-- a little more to get better ratings.
 
 
--- Which day of the week has the best avg ratings?
+-- Which day of the week has the best average ratings?
 SELECT
 	day_name,
 	AVG(rating) AS avg_rating
 FROM walmart_sales
 GROUP BY day_name 
 ORDER BY avg_rating DESC;
--- Mon, Tue and Friday are the top best days for good ratings
--- why is that the case, how many sales are made on these days?
+-- Mon, Tue, and Friday are the best days for good ratings
+-- Why is that the case, how many sales are made these days?
 
 -- Number of sales made in each day per weekday 
 SELECT
@@ -237,9 +237,9 @@ FROM walmart_sales
 GROUP BY customer_type
 ORDER BY total_revenue;
 
--- Which city has the largest tax/VAT percent?
+-- Which city has the largest tax/VAT percentage?
 SELECT
-	city,
+	City,
     ROUND(AVG(tax_pct), 2) avg_tax_pct
 FROM walmart_sales
 GROUP BY city 
@@ -252,5 +252,3 @@ SELECT
 FROM walmart_sales
 GROUP BY customer_type
 ORDER BY total_tax;
-
-
