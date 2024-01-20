@@ -11,7 +11,7 @@ This analysis aims to answer the question of the sales trends of products. The r
 
 3. Customer Analysis
 This analysis aims to uncover the different customer segments, purchase trends, and the profitability of each customer segment.
-# Question To Answer
+# Questions To Answer
 1. How many unique cities does the data have?
 2. In which city is each branch?
 3. How many unique product lines does the data have?
